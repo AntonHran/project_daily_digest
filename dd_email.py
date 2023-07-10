@@ -186,28 +186,3 @@ class DailyDigestEmail:
                 </tr>
             </table>"""
         return html
-
-
-if __name__ == '__main__':
-    '''email_ = DailyDigestEmail()
-    data = email_.recipients_list[0]
-    print(data)
-    mt = email_.format_message_text(data)
-    mh = email_.format_message_html(data)
-    message = email_.format_message()
-
-    print('Plaintext email body is ...')
-    print(message['text'])
-    print('\n' + '_' * 222 + '\n')
-    print('HTML email body is ...')
-    print(message['html'])
-
-    with open('message_text.txt', 'w', encoding='UTF-8') as file:
-        file.write(mt)'''
-    '''
-    with open('message_html.html', 'w', encoding='UTF-8') as file:
-        file.write(mh)
-    
-   print('Sending test email...')
-    email_.handle_email_type()
-'''
