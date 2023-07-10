@@ -25,22 +25,3 @@ class DailyDigestScheduler(threading.Thread):
     # stop the scheduler thread
     def stop(self):
         self.__stop_running.set()
-
-
-if __name__ == '__main__':
-
-    '''import dd_email
-    email_ = dd_email.DailyDigestEmail()
-
-    scheduler = DailyDigestScheduler()
-    scheduler.start()
-
-    h = time.localtime().tm_hour
-    # print(h, type(h))
-    m = time.localtime().tm_min + 1
-    s = 0
-    print(f'Scheduling test email for {h:02}:{m:02}:{s:02}')
-    scheduler.schedule_daily(h, m, s, email_.handle_email_type)
-
-    time.sleep(60)
-    scheduler.stop()'''
