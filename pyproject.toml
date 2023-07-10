@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "email-sender"
+version = "0.1.0"
+description = "This application can: generate a random ispirational quote, retrieve current weather forecast for specified location, retrieve current Twitter trends, retrieve a random Wikipedia article, format content into an email, schedule time of email sending, send emails to specified recipients."
+authors = ["AntonHran <anton.hranovskyi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "email_sender"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+schedule = "^1.2.0"
+tweepy = "^4.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
