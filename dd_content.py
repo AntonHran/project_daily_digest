@@ -17,12 +17,12 @@ def get_keys_passwords(name: str) -> str:
 
 def get_quote(quotes_file='quotes.csv'):
     try:
-        with open(quotes_file) as f_csv:
-            quotes = [{'author': line[0],
-                       'quote': line[1]} for line in csv.reader(f_csv, delimiter='|')]
+        with open(quotes_file, "r", encoding="utf-8") as file:
+            reader = csv.DictReader(file, fieldnames=["quote", "author"], quoting=1)
+            quotes = [row for row in reader]
     except Exception as e:
-        quotes = [{'author': 'Eric Idle',
-                   'quote': 'AlwaysLook on the Bright Side of Life.'}]
+        quotes = [{'quote': 'AlwaysLook on the Bright Side of Life.',
+                   'author': 'Eric Idle'}]
         print(e)
     return random.choice(quotes)
 
