@@ -14,7 +14,7 @@ The application enables the admin to:
 - schedule recurring daily time to send emails;
 - configure sender credentials.
 
-To install the application you should use poetry.lock file to set your envirement ad install all required packages
+To install the application you should use poetry.lock file to set your envirement and install all required packages
 
 If you would like to install and try to use this app you should know about specific requirements:
 - you should have your own api keys for weather and Twitter parts of a program as I did not input my own;
