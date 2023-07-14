@@ -21,7 +21,7 @@ def get_quote(quotes_file='quotes.csv'):
             reader = csv.DictReader(file, fieldnames=["quote", "author"], quoting=1)
             quotes = [row for row in reader]
     except Exception as e:
-        quotes = [{'quote': 'AlwaysLook on the Bright Side of Life.',
+        quotes = [{'quote': 'Always Look on the Bright Side of Life.',
                    'author': 'Eric Idle'}]
         print(e)
     return random.choice(quotes)
